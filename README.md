@@ -1,6 +1,6 @@
 # Pomodoro Timer App 
 
-A simple Pomodoro Timer appication that allows me to focus intensely with intentional breaks.
+A simple Pomodoro Timer application that allows me to focus intensely with intentional breaks.
 
 ## Tech Stack
 
