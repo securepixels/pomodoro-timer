@@ -97,7 +97,7 @@ class PomodoroTimer {
         }
     }
 
-    playNotification() {
+playNotification() {
         try {
             this.timerSound.currentTime = 0; // Reset sound to start
             this.timerSound.play();
