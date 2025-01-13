@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #4783c6;
+    color: #ffffff;
+    transition: background-color 0.5s ease;
+    min-height: 100vh;
+}
+
+body.break-mode {
+    background-color: #38858a;
+}
+
+.container {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timer-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.timer-tabs {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:first-child {
+    border-top-left-radius: 10px;
+}
+
+.tab-btn:last-child {
+    border-top-right-radius: 10px;
+}
+
+.tab-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.timer-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 10px 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.control-btn {
+    background-color: white;
+    color: #4783c6;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.break-mode .control-btn {
+    color: #38858a;
+}
+
+.control-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.timer-settings {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.setting input {
+    width: 80px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.tasks-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tasks-container h2 {
+    margin-bottom: 20px;
+}
+
+.add-task-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #05040f;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.task-description {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #05040f;
+    font-size: 14px;
+    height: 80px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.task-input:focus, .task-description:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.task-input::placeholder, .task-description::placeholder {
+    color: #666;
+}
+
+.pomodoro-count {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.pomodoro-count label {
+    color: white;
+    font-size: 14px;
+}
+
+.pomodoro-input {
+    width: 60px;
+    padding: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #05040f;
+    text-align: center;
+    font-size: 14px;
+}
+
+.add-task-button {
+    background-color: white;
+    color: #4783c6;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.add-task-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.02);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.delete-task-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.delete-task-btn:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.task-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.task-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pomodoro-indicators {
+    display: flex;
+    gap: 5px;
+}
+
+.pomodoro-indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pomodoro-indicator.completed {
+    background-color: white;
+}
