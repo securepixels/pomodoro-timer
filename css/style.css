@@ -85,11 +85,10 @@ body.break-mode {
 
 .control-btn {
     background-color: white;
-    color: #4783c6;
+    color: #05040f;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
