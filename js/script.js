@@ -97,15 +97,6 @@ class PomodoroTimer {
         }
     }
 
-    playNotification() {
-        try {
-            this.timerSound.currentTime = 0; // Reset sound to start
-            this.timerSound.play();
-        } catch (error) {
-            console.log('Sound could not be played:', error);
-        }
-    }
-}
 
 class TaskManager {
     constructor() {
